@@ -7,6 +7,7 @@
   align-items: center;
 }
 .hero-card {
+  position: relative;
   min-width: 150px;
   padding: 10px;
   background: rgb(31, 28, 28);
@@ -15,6 +16,18 @@
   align-items: center;
   flex-direction: column;
   border-radius: 25px;
+  overflow: hidden;
+  z-index: 1;
+}
+.hero-card::after {
+  content: '';
+  background: rgb(92, 21, 21);
+  border-radius: 25px;
+  position: absolute;
+  inset: 0;
+  transform-origin: bottom;
+  transform: scaleY(0);
+  z-index: -1;
 }
 .hero-link {
   display: flex;
@@ -29,5 +42,9 @@
 }
 .hero-card:hover {
   transform: scale(1.1);
+  transition: 0.3s ease;
+}
+.hero-card:hover::after {
+  transform: scaleY(1);
   transition: 0.3s ease;
 }

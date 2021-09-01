@@ -6,6 +6,7 @@ import Nav from './components/Nav';
 import About from './components/About';
 import Heroes from './components/Heroes';
 import HeroDetails from './components/HeroDetails';
+import Teams from './components/Teams';
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
           <Switch>
             <Route path="/" exact component={Home} />
             <Route path="/about" exact component={About} />
+            <Route path="/teams" exact component={Teams} />
             <Route path="/hero/:id" exact component={HeroDetails} />
             <Route path="/heroes" exact component={Heroes} />
           </Switch>

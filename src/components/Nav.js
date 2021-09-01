@@ -19,9 +19,6 @@ export default function Nav() {
         <Link to="/teams">
           <button>Teams</button>
         </Link>
-        <Link to="/heroes">
-          <button>Heroes</button>
-        </Link>
       </div>
     </nav>
   );

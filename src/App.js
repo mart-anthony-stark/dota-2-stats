@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from './components/Home';
 import Nav from './components/Nav';
 import About from './components/About';
+import Heroes from './components/Heroes';
 import HeroDetails from './components/HeroDetails';
 
 export default function App() {
@@ -15,6 +16,7 @@ export default function App() {
           <Route path="/" exact component={Home} />
           <Route path="/about" exact component={About} />
           <Route path="/hero/:id" exact component={HeroDetails} />
+          <Route path="/heroes" exact component={Heroes} />
         </Switch>
       </Router>
     </div>

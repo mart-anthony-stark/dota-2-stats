@@ -4,27 +4,9 @@ import { Link } from 'react-router-dom';
 export default function Home() {
   const [heroes, setHeroes] = useState([{ roles: [] }]);
 
-  async function getData() {
-    const res = await fetch('https://api.opendota.com/api/heroStats');
-    const data = await res.json();
-    setHeroes(data);
-  }
+  async function getData() {}
   useEffect(() => {
     getData();
   }, []);
-  return (
-    <div>
-      {heroes.map(hero => (
-        <div key={hero.id} className="hero-card">
-          <img src={`https://api.opendota.com${hero.img}`} />
-          <Link to={`/hero/${hero.id}`}>
-            <div className="">
-              <img src={`https://api.opendota.com${hero.icon}`} />
-              <h3>{hero.localized_name}</h3>
-            </div>
-          </Link>
-        </div>
-      ))}
-    </div>
-  );
+  return <div>home</div>;
 }

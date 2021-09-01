@@ -2,7 +2,7 @@ nav {
   height: 60px;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-between;
   padding: 0 25px;
   position: fixed;
   top: 0;
@@ -10,4 +10,10 @@ nav {
   background: black;
 }
 .links {
+}
+.logo {
+  color: white;
+  font-weight: bolder;
+  font-size: 1.3em;
+  letter-spacing: 0.3em;
 }

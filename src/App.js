@@ -9,15 +9,17 @@ import HeroDetails from './components/HeroDetails';
 
 export default function App() {
   return (
-    <div>
+    <div className="app">
       <Router>
         <Nav />
-        <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/about" exact component={About} />
-          <Route path="/hero/:id" exact component={HeroDetails} />
-          <Route path="/heroes" exact component={Heroes} />
-        </Switch>
+        <div className="tab">
+          <Switch>
+            <Route path="/" exact component={Home} />
+            <Route path="/about" exact component={About} />
+            <Route path="/hero/:id" exact component={HeroDetails} />
+            <Route path="/heroes" exact component={Heroes} />
+          </Switch>
+        </div>
       </Router>
     </div>
   );

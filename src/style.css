@@ -1,3 +1,25 @@
-h1, p {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+h1,
+p {
   font-family: Lato;
+}
+.app {
+  background: rgb(51, 51, 51);
+  background: radial-gradient(
+      circle,
+      rgba(51, 51, 51, 1) 91%,
+      rgba(74, 74, 74, 1) 94%,
+      rgba(11, 6, 1, 1) 100%,
+      rgba(0, 0, 0, 1) 100%
+    )
+    center fixed;
+}
+.tab {
+  padding-top: 60px;
+  min-height: 100vh;
+  overflow: hidden;
 }

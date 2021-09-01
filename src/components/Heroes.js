@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import '../styles/heroes.css';
 
 export default function Home() {
   const [heroes, setHeroes] = useState([{ roles: [] }]);
@@ -13,7 +14,7 @@ export default function Home() {
     getData();
   }, []);
   return (
-    <div>
+    <div className="heroes">
       {heroes.map(hero => (
         <div key={hero.id} className="hero-card">
           <img src={`https://api.opendota.com${hero.img}`} />

@@ -1,8 +1,26 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import '../styles/navigation.css';
 
 export default function Nav({ currentPage, setCurrentPage }) {
+  const location = useLocation();
+  useEffect(() => {
+    switch (location.pathname) {
+      case '/':
+        setCurrentPage('Home');
+        break;
+      case '/about':
+        setCurrentPage('About');
+        break;
+      case '/heroes':
+        setCurrentPage('Heroes');
+        break;
+      case '/teams':
+        setCurrentPage('Teams');
+        break;
+    }
+  }, []);
+
   return (
     <nav>
       <div className="logo">Dota Talk</div>

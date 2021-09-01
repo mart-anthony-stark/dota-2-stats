@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './style.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from './components/Home';
@@ -9,10 +9,12 @@ import HeroDetails from './components/HeroDetails';
 import Teams from './components/Teams';
 
 export default function App() {
+  const [currentPage, setCurrentPage] = useState('Home');
+
   return (
     <div className="app">
       <Router>
-        <Nav />
+        <Nav currentPage={currentPage} setCurrentPage={setCurrentPage} />
         <div className="tab">
           <Switch>
             <Route path="/" exact component={Home} />

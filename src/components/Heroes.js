@@ -21,8 +21,12 @@ export default function Home() {
         <h3 className="loading">Loading...</h3>
       ) : (
         heroes.map(hero => (
-          <Link to={`/hero/${hero.id}`} style={{ textDecoration: 'none' }}>
-            <div key={hero.id} className="hero-card">
+          <Link
+            key={hero.id}
+            to={`/hero/${hero.id}`}
+            style={{ textDecoration: 'none' }}
+          >
+            <div className="hero-card">
               <img
                 className="hero-image"
                 src={`https://api.opendota.com${hero.img}`}

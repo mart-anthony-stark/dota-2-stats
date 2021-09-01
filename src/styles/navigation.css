@@ -18,3 +18,26 @@ nav {
   font-size: 1.3em;
   letter-spacing: 0.3em;
 }
+.link {
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-right: 20px;
+  font-weight: bold;
+  font-size: 18px;
+}
+.link::after {
+  content: '';
+  display: block;
+  background: rgb(112, 0, 0);
+  width: 0%;
+  height: 3px;
+}
+.link:hover::after {
+  transition: 0.5s ease;
+  width: 100%;
+}
+.active {
+  color: rgb(143, 0, 0);
+}

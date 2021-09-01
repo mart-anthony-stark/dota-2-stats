@@ -3,6 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+:root {
+  --c-dota: rgb(92, 21, 21);
+}
 .app {
   background: rgb(51, 51, 51);
   background: radial-gradient(

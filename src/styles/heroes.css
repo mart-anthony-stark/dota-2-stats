@@ -1,5 +1,31 @@
 .heroes {
   display: flex;
   width: 100%;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.hero-card {
+  padding: 10px;
+  background: rgb(31, 28, 28);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 25px;
+}
+.hero-link {
+  display: flex;
+  color: white;
+  text-decoration: none;
+}
+.hero-image {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+.hero-card:hover {
+  transform: scale(1.1);
+  transition: 0.3s ease;
 }

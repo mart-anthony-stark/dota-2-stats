@@ -16,15 +16,19 @@ export default function Home() {
   return (
     <div className="heroes">
       {heroes.map(hero => (
-        <div key={hero.id} className="hero-card">
-          <img src={`https://api.opendota.com${hero.img}`} />
-          <Link to={`/hero/${hero.id}`}>
-            <div className="">
+        <Link to={`/hero/${hero.id}`} style={{ textDecoration: 'none' }}>
+          <div key={hero.id} className="hero-card">
+            <img
+              className="hero-image"
+              src={`https://api.opendota.com${hero.img}`}
+            />
+
+            <div className="hero-link">
               <img src={`https://api.opendota.com${hero.icon}`} />
               <h3>{hero.localized_name}</h3>
             </div>
-          </Link>
-        </div>
+          </div>
+        </Link>
       ))}
     </div>
   );

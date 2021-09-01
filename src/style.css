@@ -15,7 +15,7 @@
     center fixed;
 }
 .tab {
-  padding-top: 70px;
+  padding: 70px 20px 0 20px;
   min-height: 100vh;
   overflow: hidden;
 }

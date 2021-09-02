@@ -23,7 +23,7 @@ export default function Home() {
         heroes.map(hero => (
           <Link
             key={hero.id}
-            to={`/hero/${hero.id}`}
+            to={{ pathname: `/hero/${hero.id}`, state: { hero } }}
             style={{ textDecoration: 'none' }}
           >
             <div className="hero-card">
@@ -33,7 +33,10 @@ export default function Home() {
               />
 
               <div className="hero-link">
-                <img src={`https://api.opendota.com${hero.icon}`} />
+                <img
+                  src={`https://api.opendota.com${hero.icon}`}
+                  alt={hero.localized_name}
+                />
                 <h3>{hero.localized_name}</h3>
               </div>
             </div>

@@ -2,8 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 export default function HeroDetails({ match, location }) {
+  const [hero, setHero] = useState([]);
   const getData = async () => {
-    console.log(location);
+    setHero(location.state.hero);
+    console.log(location.state.hero);
   };
   useEffect(() => {
     getData();
@@ -11,7 +13,8 @@ export default function HeroDetails({ match, location }) {
   return (
     <div>
       <Link to="/">Back</Link>
-      {match.params.id}
+      {hero.localized_name}
+      {hero.localized_name}
     </div>
   );
 }

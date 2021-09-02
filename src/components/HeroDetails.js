@@ -11,10 +11,14 @@ export default function HeroDetails({ match, location }) {
     getData();
   }, []);
   return (
-    <div>
+    <div className="hero-details">
       <Link to="/">Back</Link>
       {hero.localized_name}
-      <img src={`https://api.opendota.com${hero.img}`} alt="" />
+      <img
+        className="hero-image"
+        src={`https://api.opendota.com${hero.img}`}
+        alt=""
+      />
       <p>Primary attribute: {hero.primary_attr}</p>
       <p>Roles: {hero.roles}</p>
       <p>Base Health: {hero.base_health}</p>
@@ -28,6 +32,10 @@ export default function HeroDetails({ match, location }) {
       <p>Base Str Gain: {hero.str_gain}</p>
       <p>Base Agi Gain: {hero.agi_gain}</p>
       <p>Base Int Gain: {hero.int_gain}</p>
+      <p>Attack Range: {hero.attack_range}</p>
+      <p>Projectile Speed: {hero.projectile_speed}</p>
+      <p>Attack Rate: {hero.attack_rate}</p>
+      <p>Move Speed: {hero.move_speed}</p>
     </div>
   );
 }

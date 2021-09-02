@@ -1,19 +1,19 @@
-/* .heroes {
+.heroes {
   display: flex;
   width: 100%;
   flex-wrap: wrap;
   gap: 10px;
   justify-content: center;
   align-items: center;
-} */
-.heroes {
+}
+/* .heroes {
   width: 100%;
   display: grid;
   grid-auto-rows: 170px;
   grid-template-columns: repeat(auto-fit, 200px);
   gap: 10px;
   justify-content: center;
-}
+} */
 .hero-card {
   position: relative;
   min-width: 150px;

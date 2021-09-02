@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import LoadingText from '../shared/loadingText';
 
 export default function Teams() {
   const [isLoading, setIsLoading] = useState(true);
@@ -20,7 +21,7 @@ export default function Teams() {
     <div>
       <h2>Teams</h2>
       {isLoading ? (
-        <h3>Loading...</h3>
+        <LoadingText />
       ) : (
         teams.map(team => (
           <div key={team.team_id}>

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/heroes.css';
+import LoadingText from '../shared/loadingText';
 
 export default function Home() {
   const [heroes, setHeroes] = useState([{ roles: [] }]);
@@ -18,7 +19,7 @@ export default function Home() {
   return (
     <div className="heroes">
       {isLoading ? (
-        <h3 className="loading">Loading...</h3>
+        <LoadingText />
       ) : (
         heroes.map(hero => (
           <Link

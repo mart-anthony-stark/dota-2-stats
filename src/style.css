@@ -16,12 +16,20 @@
       rgba(0, 0, 0, 1) 100%
     )
     center fixed;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 .tab {
-  padding: 70px 20px 0 20px;
+  padding: 80px 20px 0 20px;
   min-height: 100vh;
   overflow: hidden;
 }
 .loading {
   color: aliceblue;
+}
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--c-dota);
 }

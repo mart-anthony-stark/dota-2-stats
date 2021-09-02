@@ -42,6 +42,9 @@
   color: white;
   text-decoration: none;
   margin-top: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
 .hero-image {
   height: 100px;

@@ -41,3 +41,6 @@ nav {
 .active {
   color: rgb(143, 0, 0);
 }
+.menu.open .iconify {
+  color: rgb(112, 13, 13) !important;
+}

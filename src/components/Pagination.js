@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import '../styles/pagination.css';
 
 export default function({ totalTeams, teamsPerPage, paginate }) {
   const pageNumbers = [];
@@ -6,13 +7,16 @@ export default function({ totalTeams, teamsPerPage, paginate }) {
     pageNumbers.push(i);
 
   return (
-    <ul className="pagination">
+    <div className="pagination">
       {pageNumbers.map(number => (
-        <li key={number}>
-          <a onClick={() => paginate(number)}>{number}</a>
-        </li>
+        <a
+          className="page-number"
+          key={number}
+          onClick={() => paginate(number)}
+        >
+          {number}
+        </a>
       ))}
-      xcv
-    </ul>
+    </div>
   );
 }

@@ -1,0 +1,15 @@
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 900px;
+  margin: auto;
+  gap: 5px;
+}
+.page-number {
+  padding: 10px;
+  background: #ffff;
+  border-radius: 5px;
+  cursor: pointer;
+}

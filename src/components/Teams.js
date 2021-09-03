@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import LoadingText from '../shared/loadingText';
 import TeamCard from './TeamCard';
 import Pagination from './Pagination';
+import '../styles/teams.css';
 
 export default function Teams() {
   const [isLoading, setIsLoading] = useState(true);
@@ -32,12 +33,13 @@ export default function Teams() {
 
   return (
     <div>
-      <h2>Teams</h2>
-      {isLoading ? (
-        <LoadingText />
-      ) : (
-        currentData.map(team => <TeamCard key={team.team_id} team={team} />)
-      )}
+      <div className="teams">
+        {isLoading ? (
+          <LoadingText />
+        ) : (
+          currentData.map(team => <TeamCard key={team.team_id} team={team} />)
+        )}
+      </div>
       <Pagination
         totalTeams={teams.length}
         teamsPerPage={teamsPerPage}

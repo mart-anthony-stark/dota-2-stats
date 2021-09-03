@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import '../styles/heroDetails.css';
 
 export default function HeroDetails({ match, location }) {
   const [hero, setHero] = useState([{ roles: [] }]);
@@ -21,8 +22,27 @@ export default function HeroDetails({ match, location }) {
       />
       <p>Primary attribute: {hero.primary_attr}</p>
       <p>Roles: {hero.roles}</p>
-      <p>Base Health: {hero.base_health}</p>
-      <p>Base Mana: {hero.base_mana}</p>
+
+      {/* <p>Base Health: {hero.base_health}</p> */}
+      <div className="bar-container">
+        <div
+          className="bar health"
+          style={{ width: (hero.base_health / 500) * 100 + 200 }}
+        >
+          {hero.base_health} HP
+        </div>
+      </div>
+
+      {/* <p>Base Mana: {hero.base_mana}</p> */}
+      <div className="bar-container">
+        <div
+          className="bar mana"
+          style={{ width: (hero.base_mana / 500) * 100 + 200 }}
+        >
+          {hero.base_mana} MP
+        </div>
+      </div>
+
       <p>Base Strength{hero.base_str}</p>
       <p>Base Agility: {hero.base_agi}</p>
       <p>Base Intelligence: {hero.base_int}</p>

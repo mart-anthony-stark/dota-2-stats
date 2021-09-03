@@ -1,0 +1,20 @@
+/* .bar-container {
+  min-width: 380px;
+} */
+.bar {
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+.health {
+  border: 2px solid green;
+  background: rgb(13, 87, 13);
+  height: 25px;
+}
+.mana {
+  border: 2px solid rgb(13, 0, 128);
+  background: rgb(29, 13, 87);
+  height: 25px;
+}

@@ -41,6 +41,18 @@ nav {
 .active {
   color: rgb(143, 0, 0);
 }
+.menu {
+  display: none;
+}
 .menu.open .iconify {
   color: rgb(112, 13, 13) !important;
+}
+
+@media (max-width: 650px) {
+  .menu {
+    display: block;
+  }
+  .links {
+    display: none;
+  }
 }

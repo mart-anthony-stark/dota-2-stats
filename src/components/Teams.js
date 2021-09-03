@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import LoadingText from '../shared/loadingText';
+import TeamCard from './TeamCard';
+import Pagination from './Pagination';
 
 export default function Teams() {
   const [isLoading, setIsLoading] = useState(true);
   const [teams, setTeams] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const [teamsPerPage, setTeamsPerPage] = useState(10);
+  const [teamsPerPage] = useState(15);
 
   const getData = async () => {
     const res = await fetch('https://api.opendota.com/api/teams');
@@ -34,13 +36,13 @@ export default function Teams() {
       {isLoading ? (
         <LoadingText />
       ) : (
-        currentData.map(team => (
-          <div key={team.team_id}>
-            <h3>{team.name}</h3>
-            <img src={team.logo_url} alt="" />
-          </div>
-        ))
+        currentData.map(team => <TeamCard key={team.team_id} team={team} />)
       )}
+      <Pagination
+        totalTeams={teams.length}
+        teamsPerPage={teamsPerPage}
+        paginate={paginate}
+      />
     </div>
   );
 }

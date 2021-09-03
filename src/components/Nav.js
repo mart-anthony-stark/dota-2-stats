@@ -27,8 +27,6 @@ export default function Nav({ currentPage, setCurrentPage }) {
     } else {
       setIsSideOpen(true);
     }
-
-    console.log(isSideOpen);
   };
 
   return (

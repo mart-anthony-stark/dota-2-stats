@@ -13,3 +13,6 @@
   border-radius: 5px;
   cursor: pointer;
 }
+.page-number:hover {
+  background: red;
+}

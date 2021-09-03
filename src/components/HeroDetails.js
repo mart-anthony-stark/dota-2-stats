@@ -6,7 +6,6 @@ export default function HeroDetails({ match, location }) {
   const [hero, setHero] = useState([{ roles: [] }]);
   const getData = async () => {
     setHero(location.state.hero);
-    console.log(location.state.hero);
   };
   useEffect(() => {
     getData();

@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import '../styles/navigation.css';
 
 export default function Nav({ currentPage, setCurrentPage }) {
+  const [isSideOpen, setIsSideOpen] = useState(true);
   const location = useLocation();
   useEffect(() => {
     switch (location.pathname) {
@@ -20,6 +21,12 @@ export default function Nav({ currentPage, setCurrentPage }) {
         break;
     }
   }, []);
+  const handleToggle = () => {
+    if (isSideOpen) setIsSideOpen(false);
+    else setIsSideOpen(true);
+
+    console.log(isSideOpen);
+  };
 
   return (
     <nav>
@@ -57,6 +64,17 @@ export default function Nav({ currentPage, setCurrentPage }) {
             Teams
           </button>
         </Link>
+      </div>
+      <div className="menu" onClick={handleToggle}>
+        <span
+          className="iconify"
+          data-icon="mdi:microsoft-xbox-controller-menu"
+          style={{
+            fontSize: 50,
+            cursor: 'pointer',
+            color: 'white'
+          }}
+        />
       </div>
     </nav>
   );

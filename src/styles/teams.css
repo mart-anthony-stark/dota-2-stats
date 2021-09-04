@@ -7,13 +7,9 @@
   align-items: center;
   margin-bottom: 50px;
 }
-.team-card {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+.team-row {
 }
-.team-card img {
-  height: 130px;
-  width: 130px;
+.team-row img {
+  height: 30px;
+  width: 30px;
 }

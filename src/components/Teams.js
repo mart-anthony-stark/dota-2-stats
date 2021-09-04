@@ -45,8 +45,11 @@ export default function Teams() {
             <LoadingText />
           ) : (
             currentData.map(team => (
-              <tr key={team.team_id} team={team}>
-                <td>{team.name}</td>
+              <tr key={team.team_id} team={team} className="team-row">
+                <td className="">
+                  <img src={team.logo_url} alt="" />
+                  {team.name}
+                </td>
                 <td>{team.rating}</td>
                 <td>{team.wins}</td>
                 <td>{team.losses}</td>

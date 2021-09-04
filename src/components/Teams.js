@@ -34,7 +34,7 @@ export default function Teams() {
   return (
     <div>
       <div className="teams">
-        <table>
+        <table className="table">
           <thead>
             <th>Teams</th>
             <th>Rating</th>
@@ -46,7 +46,7 @@ export default function Teams() {
           ) : (
             currentData.map(team => (
               <tr key={team.team_id} team={team} className="team-row">
-                <td className="">
+                <td className="name">
                   <img src={team.logo_url} alt="" />
                   {team.name}
                 </td>

@@ -9,13 +9,13 @@ export default function Teams() {
   const [isLoading, setIsLoading] = useState(true);
   const [teams, setTeams] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const [teamsPerPage] = useState(15);
+  const [teamsPerPage] = useState(25);
 
   const getData = async () => {
     const res = await fetch('https://api.opendota.com/api/teams');
     const data = await res.json();
     const filtered = data.slice(0, 10).filter(team => team.name !== '');
-    setTeams(data);
+    setTeams(data.filter(team => team.name !== ''));
     setIsLoading(false);
   };
 
@@ -34,16 +34,32 @@ export default function Teams() {
   return (
     <div>
       <div className="teams">
-        {isLoading ? (
-          <LoadingText />
-        ) : (
-          currentData.map(team => <TeamCard key={team.team_id} team={team} />)
-        )}
+        <table>
+          <thead>
+            <th>Teams</th>
+            <th>Rating</th>
+            <th>Wins</th>
+            <th>Losses</th>
+          </thead>
+          {isLoading ? (
+            <LoadingText />
+          ) : (
+            currentData.map(team => (
+              <tr key={team.team_id} team={team}>
+                <td>{team.name}</td>
+                <td>{team.rating}</td>
+                <td>{team.wins}</td>
+                <td>{team.losses}</td>
+              </tr>
+            ))
+          )}
+        </table>
       </div>
       <Pagination
         totalTeams={teams.length}
         teamsPerPage={teamsPerPage}
         paginate={paginate}
+        currentPage={currentPage}
       />
     </div>
   );

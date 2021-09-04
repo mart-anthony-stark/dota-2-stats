@@ -9,9 +9,10 @@ table {
   width: 30px;
 }
 th {
+  border-radius: 3px;
   padding: 15px 20px;
 }
-.table .header {
+.teams .header {
   border-radius: 25px;
   background: black;
 }
@@ -28,11 +29,11 @@ td {
   align-items: center;
   gap: 10px;
 }
-.table tr:hover {
+.teams tr:hover {
   background: rgba(255, 255, 255, 0.1);
 }
-tr.team-row:hover {
-  background: white;
+tbody td:hover {
+  background: rgb(58, 58, 58);
 }
 .teams-container {
   display: flex;
@@ -40,4 +41,7 @@ tr.team-row:hover {
   align-items: center;
   overflow: auto;
   margin-bottom: 50px;
+}
+tr:last-child {
+  border-bottom: 3px solid red;
 }

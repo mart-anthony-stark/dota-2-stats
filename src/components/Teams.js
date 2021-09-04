@@ -34,7 +34,7 @@ export default function Teams() {
   return (
     <div>
       <div className="teams-container">
-        <table className="table">
+        <table className="teams">
           <thead className="header">
             <th>Teams</th>
             <th>Rating</th>

@@ -33,29 +33,31 @@ export default function Teams() {
 
   return (
     <div>
-      <div className="teams">
+      <div className="teams-container">
         <table className="table">
-          <thead>
+          <thead className="header">
             <th>Teams</th>
             <th>Rating</th>
             <th>Wins</th>
             <th>Losses</th>
           </thead>
-          {isLoading ? (
-            <LoadingText />
-          ) : (
-            currentData.map(team => (
-              <tr key={team.team_id} team={team} className="team-row">
-                <td className="name">
-                  <img src={team.logo_url} alt="" />
-                  {team.name}
-                </td>
-                <td>{team.rating}</td>
-                <td>{team.wins}</td>
-                <td>{team.losses}</td>
-              </tr>
-            ))
-          )}
+          <tbody>
+            {isLoading ? (
+              <LoadingText />
+            ) : (
+              currentData.map(team => (
+                <tr key={team.team_id} team={team} className="team-row">
+                  <td className="name">
+                    <img src={team.logo_url} alt="" />
+                    {team.name}
+                  </td>
+                  <td id="rating">{team.rating}</td>
+                  <td id="wins">{team.wins}</td>
+                  <td id="losses">{team.losses}</td>
+                </tr>
+              ))
+            )}
+          </tbody>
         </table>
       </div>
       <Pagination

@@ -1,17 +1,8 @@
-.teams {
-  display: flex;
-  width: 100%;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 50px;
-}
 table {
   color: white;
   max-width: 700px;
   width: 100%;
-  border-collapse: collapse;
+  border-collapse: separate;
 }
 .team-row img {
   height: 30px;
@@ -20,14 +11,16 @@ table {
 th {
   padding: 15px 20px;
 }
-.table thead {
-  border-radius: 15px 15px 0 0;
+.table .header {
+  border-radius: 25px;
+  background: black;
 }
-th,
 td {
   color: white;
   background: rgb(51, 51, 51);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+  padding: 10px 0;
 }
 .name {
   display: flex;
@@ -37,4 +30,14 @@ td {
 }
 .table tr:hover {
   background: rgba(255, 255, 255, 0.1);
+}
+tr.team-row:hover {
+  background: white;
+}
+.teams-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+  margin-bottom: 50px;
 }

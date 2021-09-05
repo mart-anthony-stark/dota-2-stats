@@ -22,6 +22,7 @@ export default function App() {
             <Route path="/teams" exact component={Teams} />
             <Route path="/hero/:id" exact component={HeroDetails} />
             <Route path="/heroes" exact component={Heroes} />
+            <Route path="/forum" exact component={Heroes} />
           </Switch>
         </div>
       </Router>

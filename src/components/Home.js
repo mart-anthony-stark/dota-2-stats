@@ -12,7 +12,15 @@ export default function Home(props) {
   return (
     <div className="home">
       <div className="hero">
-        <h2 className="tagline">“A MODERN MULTIPLAYER MASTERPIECE.”</h2>
+        <div className="group">
+          <h2 className="tagline">
+            “A MODERN MULTIPLAYER MASTERPIECE.”<span>-DESTRUCTOID</span>
+          </h2>
+          <button className="store-btn">
+            <span class="iconify" data-icon="la:steam" />
+            Play For Free
+          </button>
+        </div>
       </div>
     </div>
   );

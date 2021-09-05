@@ -8,7 +8,7 @@
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
     url(https://wallpaperaccess.com/full/671214.jpg) center;
   background-size: cover;
-  padding-top: 80px;
+  padding: 80px 25px;
 }
 .wallpaper {
   position: absolute;
@@ -23,9 +23,52 @@
   position: relative;
   z-index: 1;
 }
+.group {
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 50px;
+  transform: translateY(60%);
+  margin-left: 30px;
+}
 .tagline {
   font-family: 'Electrolize', sans-serif;
   color: #fff;
   font-size: 4em;
-  text-align: center;
+}
+.tagline span {
+  position: relative;
+  display: block;
+  font-size: 1rem;
+  letter-spacing: 1em;
+  color: #a19a9a;
+  width: fit-content;
+}
+.tagline span::after {
+  position: absolute;
+  content: '';
+  display: block;
+  background: var(--c-lighten);
+  height: 4px;
+  width: 100%;
+}
+.store-btn {
+  position: relative;
+  cursor: pointer;
+  color: #fff;
+  padding: 10px;
+  border: 2px solid #fff;
+  width: 200px;
+  display: flex;
+  background: none;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 25px;
+}
+.store-btn .iconify {
+  color: #fff;
+  font-size: 2em;
 }

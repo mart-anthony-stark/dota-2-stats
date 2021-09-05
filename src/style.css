@@ -9,6 +9,7 @@ font-family: 'Shrikhand', cursive; */
 }
 :root {
   --c-dota: rgb(92, 21, 21);
+  --c-lighten: rgb(202, 56, 56);
 }
 .app {
   background: rgb(51, 51, 51);

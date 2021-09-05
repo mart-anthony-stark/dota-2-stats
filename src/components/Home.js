@@ -11,11 +11,11 @@ export default function Home(props) {
   }, []);
   return (
     <div className="home">
-      <img
+      {/* <img
         className="wallpaper"
         src="https://wallpaperaccess.com/full/671214.jpg"
         alt=""
-      />
+      /> */}
       <div className="hero">“A MODERN MULTIPLAYER MASTERPIECE.”</div>
     </div>
   );

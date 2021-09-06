@@ -7,6 +7,7 @@ import About from './components/About';
 import Heroes from './components/Heroes';
 import HeroDetails from './components/HeroDetails';
 import Teams from './components/Teams';
+import MobileNav from './components/mobileNav';
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState('Home');
@@ -16,6 +17,10 @@ export default function App() {
       <Router>
         <Nav currentPage={currentPage} setCurrentPage={setCurrentPage} />
         <div className="tab">
+          <MobileNav
+            currentPage={currentPage}
+            setCurrentPage={setCurrentPage}
+          />
           <Switch>
             <Route path="/" exact component={Home} />
             <Route path="/about" exact component={About} />

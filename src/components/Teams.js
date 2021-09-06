@@ -32,7 +32,7 @@ export default function Teams() {
   const paginate = pageNumber => setCurrentPage(pageNumber);
 
   return (
-    <div>
+    <div className="comp">
       <div className="teams-container">
         <table className="teams">
           <thead className="header">

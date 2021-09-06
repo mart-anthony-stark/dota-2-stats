@@ -23,7 +23,16 @@ export default function Home(props) {
         </div>
       </div>
       <section>
-        <h2>JOIN THE BATTLE OF THE ANCIENTS</h2>
+        <div className="lines">
+          <h2 className="join">JOIN THE BATTLE OF THE ANCIENTS</h2>
+          <p>
+            Every day, millions of players worldwide enter the battle as one of
+            over a hundred Dota Heroes in a 5v5 team clash. Dota is the deepest
+            multi-player action RTS game ever made and there's always a new
+            strategy or tactic to discover. It's completely free to play and
+            always will be – start defending your ancient now.
+          </p>
+        </div>
       </section>
     </div>
   );

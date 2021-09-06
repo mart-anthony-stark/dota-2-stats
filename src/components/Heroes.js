@@ -17,7 +17,7 @@ export default function Home() {
     getData();
   }, []);
   return (
-    <div className="heroes">
+    <div className="heroes comp">
       {isLoading ? (
         <LoadingText />
       ) : (

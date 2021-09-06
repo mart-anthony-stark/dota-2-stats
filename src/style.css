@@ -32,9 +32,11 @@ font-family: 'Shrikhand', cursive; */
     'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 .tab {
-  padding: 80px 20px 30px 20px;
   min-height: 100vh;
   overflow: hidden;
+}
+.comp {
+  padding: 80px 20px 30px 20px;
 }
 .loading {
   color: aliceblue;

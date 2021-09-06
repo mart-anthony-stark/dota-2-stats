@@ -22,6 +22,9 @@ export default function Home(props) {
           </button>
         </div>
       </div>
+      <section>
+        <h2>JOIN THE BATTLE OF THE ANCIENTS</h2>
+      </section>
     </div>
   );
 }

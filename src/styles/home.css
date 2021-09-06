@@ -1,14 +1,15 @@
-.home {
+.hero {
   position: absolute;
   top: 0;
   left: 0;
   z-index: 1;
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
-    url(https://wallpaperaccess.com/full/671214.jpg) center;
   background-size: cover;
   padding: 80px 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .wallpaper {
   position: absolute;
@@ -20,8 +21,11 @@
   pointer-events: none;
 }
 .hero {
-  position: relative;
-  z-index: 1;
+  /* position: relative; */
+  /* z-index: 1; */
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
+    url(https://wallpaperaccess.com/full/671214.jpg) center;
 }
 .group {
   max-width: 700px;
@@ -30,13 +34,12 @@
   align-items: flex-start;
   justify-content: center;
   gap: 50px;
-  transform: translateY(60%);
-  margin-left: 30px;
 }
 .tagline {
   font-family: 'Electrolize', sans-serif;
   color: #fff;
   font-size: 4em;
+  width: fit-content;
 }
 .tagline span {
   position: relative;
@@ -71,4 +74,10 @@
 .store-btn .iconify {
   color: #fff;
   font-size: 2em;
+}
+
+@media (max-width: 586px) {
+  .tagline {
+    font-size: 3em;
+  }
 }

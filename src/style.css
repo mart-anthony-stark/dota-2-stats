@@ -10,6 +10,13 @@ font-family: 'Shrikhand', cursive; */
 :root {
   --c-dota: rgb(92, 21, 21);
   --c-lighten: rgb(202, 56, 56);
+  --c-bg: radial-gradient(
+    circle,
+    rgba(51, 51, 51, 1) 91%,
+    rgba(74, 74, 74, 1) 94%,
+    rgba(11, 6, 1, 1) 100%,
+    rgba(0, 0, 0, 1) 100%
+  );
 }
 .app {
   background: rgb(51, 51, 51);
@@ -38,3 +45,7 @@ font-family: 'Shrikhand', cursive; */
 ::-webkit-scrollbar-thumb {
   background: var(--c-dota);
 }
+/* section {
+  min-height: 100vh;
+  background: var(--c-bg);
+} */

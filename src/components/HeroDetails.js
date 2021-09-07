@@ -16,7 +16,7 @@ export default function HeroDetails({ match, location }) {
         <span class="iconify" data-icon="mdi:arrow-left-circle" />
       </Link>
       <div className="card">
-        {hero.localized_name}
+        <h2>{hero.localized_name}</h2>
         <img
           className="hero-image"
           src={`https://api.opendota.com${hero.img}`}

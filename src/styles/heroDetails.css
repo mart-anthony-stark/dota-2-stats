@@ -1,6 +1,18 @@
 /* .bar-container {
   min-width: 380px;
 } */
+.back {
+  position: absolute;
+  top: 80px;
+  left: 5px;
+  font-size: 30px;
+  color: #fff;
+}
+.hero-details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .bar {
   border-radius: 5px;
   display: flex;
@@ -17,4 +29,6 @@
   border: 2px solid rgb(13, 0, 128);
   background: rgb(29, 13, 87);
   height: 25px;
+}
+.card {
 }

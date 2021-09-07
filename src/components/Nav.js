@@ -2,8 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import '../styles/navigation.css';
 
-export default function Nav({ currentPage, setCurrentPage }) {
-  const [isSideOpen, setIsSideOpen] = useState(false);
+export default function Nav({
+  currentPage,
+  setCurrentPage,
+  setNavOpen,
+  isNavOpen
+}) {
   const location = useLocation();
   useEffect(() => {
     switch (location.pathname) {
@@ -22,10 +26,10 @@ export default function Nav({ currentPage, setCurrentPage }) {
     }
   }, []);
   const handleToggle = () => {
-    if (isSideOpen) {
-      setIsSideOpen(false);
+    if (isNavOpen) {
+      setNavOpen(false);
     } else {
-      setIsSideOpen(true);
+      setNavOpen(true);
     }
   };
 
@@ -66,10 +70,7 @@ export default function Nav({ currentPage, setCurrentPage }) {
           </button>
         </Link>
       </div>
-      <div
-        className={`menu ${isSideOpen ? 'open' : ''}`}
-        onClick={handleToggle}
-      >
+      <div className={`menu ${isNavOpen ? 'open' : ''}`} onClick={handleToggle}>
         <span
           className={`iconify`}
           data-icon="mdi:microsoft-xbox-controller-menu"

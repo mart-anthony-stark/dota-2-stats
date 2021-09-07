@@ -11,15 +11,22 @@ import MobileNav from './components/mobileNav';
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState('Home');
-
+  const [isNavOpen, setNavOpen] = useState(true);
   return (
     <div className="app">
       <Router>
-        <Nav currentPage={currentPage} setCurrentPage={setCurrentPage} />
+        <Nav
+          currentPage={currentPage}
+          setCurrentPage={setCurrentPage}
+          isNavOpen={isNavOpen}
+          setNavOpen={setNavOpen}
+        />
         <div className="tab">
           <MobileNav
             currentPage={currentPage}
             setCurrentPage={setCurrentPage}
+            isNavOpen={isNavOpen}
+            setNavOpen={setNavOpen}
           />
           <Switch>
             <Route path="/" exact component={Home} />

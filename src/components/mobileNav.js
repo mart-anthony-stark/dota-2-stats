@@ -1,9 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import '../styles/mobileNav.css';
 
-export default function MobileNav({ setCurrentPage, currentPage, setNavOpen }) {
+export default function MobileNav({
+  setCurrentPage,
+  currentPage,
+  isNavOpen,
+  setNavOpen
+}) {
   return (
-    <div className="mobile-nav">
+    <div className={isNavOpen ? 'mobile-nav open' : 'mobile-nav'}>
       <Link to="/">
         <button
           className={currentPage == 'Home' ? 'link active' : 'link'}

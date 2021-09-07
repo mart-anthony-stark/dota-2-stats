@@ -11,7 +11,7 @@ export default function HeroDetails({ match, location }) {
     getData();
   }, []);
   return (
-    <div className="hero-details">
+    <div className="hero-details comp">
       <Link to="/">Back</Link>
       {hero.localized_name}
       <img

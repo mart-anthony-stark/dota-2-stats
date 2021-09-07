@@ -1,13 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export default function MobileNav({ setCurrentPage, currentPage }) {
+export default function MobileNav({ setCurrentPage, currentPage, setNavOpen }) {
   return (
-    <div>
+    <div className="mobile-nav">
       <Link to="/">
         <button
           className={currentPage == 'Home' ? 'link active' : 'link'}
-          onClick={() => setCurrentPage('Home')}
+          onClick={() => {
+            setCurrentPage('Home');
+            setNavOpen(false);
+          }}
         >
           Home
         </button>
@@ -15,7 +18,10 @@ export default function MobileNav({ setCurrentPage, currentPage }) {
       <Link to="/about">
         <button
           className={currentPage == 'About' ? 'link active' : 'link'}
-          onClick={() => setCurrentPage('About')}
+          onClick={() => {
+            setCurrentPage('About');
+            setNavOpen(false);
+          }}
         >
           About
         </button>
@@ -23,7 +29,10 @@ export default function MobileNav({ setCurrentPage, currentPage }) {
       <Link to="/heroes">
         <button
           className={currentPage == 'Heroes' ? 'link active' : 'link'}
-          onClick={() => setCurrentPage('Heroes')}
+          onClick={() => {
+            setCurrentPage('Heroes');
+            setNavOpen(false);
+          }}
         >
           Heroes
         </button>
@@ -31,7 +40,10 @@ export default function MobileNav({ setCurrentPage, currentPage }) {
       <Link to="/teams">
         <button
           className={currentPage == 'Teams' ? 'link active' : 'link'}
-          onClick={() => setCurrentPage('Teams')}
+          onClick={() => {
+            setCurrentPage('Teams');
+            setNavOpen(false);
+          }}
         >
           Teams
         </button>

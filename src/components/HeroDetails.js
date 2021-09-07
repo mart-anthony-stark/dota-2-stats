@@ -23,7 +23,10 @@ export default function HeroDetails({ match, location }) {
           alt=""
         />
         <p>Primary attribute: {hero.primary_attr}</p>
-        <p>Roles: {hero.roles}</p>
+        <p>
+          Roles:
+          {hero.roles}
+        </p>
 
         {/* <p>Base Health: {hero.base_health}</p> */}
         <div className="bar-container">

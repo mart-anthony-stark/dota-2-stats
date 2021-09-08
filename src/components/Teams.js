@@ -4,6 +4,7 @@ import LoadingText from '../shared/loadingText';
 import TeamCard from './TeamCard';
 import Pagination from './Pagination';
 import '../styles/teams.css';
+import { motion } from 'framer-motion';
 
 export default function Teams() {
   const [isLoading, setIsLoading] = useState(true);
@@ -32,7 +33,12 @@ export default function Teams() {
   const paginate = pageNumber => setCurrentPage(pageNumber);
 
   return (
-    <div className="comp">
+    <motion.div
+      className="comp"
+      initial={{ x: '100vw' }}
+      animate={{ x: 0 }}
+      transition={{ delay: 0.5, type: 'spring', stiffness: 20 }}
+    >
       <div className="teams-container">
         <table className="teams">
           <thead className="header">
@@ -66,6 +72,6 @@ export default function Teams() {
         paginate={paginate}
         currentPage={currentPage}
       />
-    </div>
+    </motion.div>
   );
 }

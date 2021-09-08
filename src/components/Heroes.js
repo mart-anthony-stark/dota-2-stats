@@ -22,6 +22,7 @@ export default function Home() {
       className="heroes comp"
       initial={{ x: '100vw' }}
       animate={{ x: 0 }}
+      transition={{ delay: 0.5, type: 'spring', stiffness: 20 }}
     >
       {isLoading ? (
         <LoadingText />

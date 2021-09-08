@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/heroes.css';
 import LoadingText from '../shared/loadingText';
+import { motion } from 'framer-motion';
 
 export default function Home() {
   const [heroes, setHeroes] = useState([{ roles: [] }]);
@@ -17,7 +18,11 @@ export default function Home() {
     getData();
   }, []);
   return (
-    <div className="heroes comp">
+    <motion.div
+      className="heroes comp"
+      initial={{ x: '100vw' }}
+      animate={{ x: 0 }}
+    >
       {isLoading ? (
         <LoadingText />
       ) : (
@@ -44,6 +49,6 @@ export default function Home() {
           </Link>
         ))
       )}
-    </div>
+    </motion.div>
   );
 }

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/home.css';
 import Aos from 'aos';
+import { motion } from 'framer-motion';
 
 export default function Home(props) {
   const [heroes, setHeroes] = useState([{ roles: [] }]);
@@ -12,7 +13,12 @@ export default function Home(props) {
     getData();
   }, []);
   return (
-    <div className="home">
+    <motion.div
+      className="home"
+      initial={{ x: '100vw' }}
+      animate={{ x: 0 }}
+      transition={{ delay: 0.5, type: 'spring', stiffness: 20 }}
+    >
       <div className="hero">
         <div className="group">
           <h2 className="tagline">
@@ -38,6 +44,6 @@ export default function Home(props) {
           </p>
         </div>
       </section>
-    </div>
+    </motion.div>
   );
 }

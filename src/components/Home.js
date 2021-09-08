@@ -13,12 +13,7 @@ export default function Home(props) {
     getData();
   }, []);
   return (
-    <motion.div
-      className="home"
-      initial={{ x: '100vw' }}
-      animate={{ x: 0 }}
-      transition={{ delay: 0.5, type: 'spring', stiffness: 20 }}
-    >
+    <div className="home">
       <div className="hero">
         <div className="group">
           <h2 className="tagline">
@@ -44,6 +39,6 @@ export default function Home(props) {
           </p>
         </div>
       </section>
-    </motion.div>
+    </div>
   );
 }
